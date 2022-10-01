@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import DetailsPage from "./Details/details";
+import HeaderComponent from "./Index/header";
 import HomePage from "./Index/home";
 
 function App() {
@@ -9,11 +10,21 @@ function App() {
       <Routes>
          <Route
             path="/:id"
-            element={<DetailsPage />}
+            element={
+              <>
+                <HeaderComponent />
+                <DetailsPage />
+              </>
+            }
           /> 
         <Route
             path="/"
-            element={<HomePage />}
+            element={
+              <>
+                <HeaderComponent />
+                <HomePage />
+              </>
+            }
           />        
       </Routes>
     </BrowserRouter>
