@@ -1,0 +1,40 @@
+.telf-details{
+    display: grid;
+    gap: 15px;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+    'one'
+     'two'
+     'three';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+
+}
+
+.grid-area-1{
+    grid-area: one;
+    height: 250px;
+    margin: 0 auto;
+}
+.grid-area-2{
+    grid-area: two;
+}
+.grid-area-3{
+    grid-area: three;
+    border-top: 1px solid black;
+    padding-top: 1em;
+}
+
+@media screen and (min-width: 38em) {
+  .telf-details {
+    grid-template-areas:
+     
+     'one two'
+    'one three';
+     
+  }
+}
