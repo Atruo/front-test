@@ -7,7 +7,7 @@
      'two'
      'three';
     position: absolute;
-    top: 65%;
+    top: 75%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -93,8 +93,11 @@
   background-color: #1abc38;
   color: white;
   position: fixed;
-  top: 0%;
-  left: 30%;
+  top: 75%;
+  left: 5%;
+  width: 80%;
+  
+  z-index: 200;
 }
 .closebtn {
   margin-left: 15px;
@@ -110,6 +113,11 @@
   color: rgb(5, 57, 25);
 }
 
+@media screen and (min-width: 375px) {
+  .telf-details{
+    top: 75%;
+  }
+}
 @media screen and (min-width: 38em) {
   .telf-details {
     grid-template-areas:     
@@ -132,5 +140,9 @@
   .volver-btn{
     margin-top: 0;
     margin-left: .5em;
+  }
+  .alert {
+    top: 0%;
+    left: 0%;
   }
 }
