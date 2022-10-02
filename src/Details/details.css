@@ -88,6 +88,27 @@
   width: 100%;
 }
 
+.alert {
+  padding: 20px;
+  background-color: #1abc38;
+  color: white;
+  position: fixed;
+  top: 0%;
+  left: 30%;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebtn:hover {
+  color: rgb(5, 57, 25);
+}
 
 @media screen and (min-width: 38em) {
   .telf-details {
