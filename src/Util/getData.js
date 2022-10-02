@@ -8,7 +8,7 @@ export const getTelfData = async () => {
         const rawData = await res.json()              
         return(rawData)              
     } catch (error) {
-        throw ("Something failed")
+        throw new Error("Something failed")
     }   
     
 };
@@ -20,7 +20,7 @@ export const getTelfDetails= async (id) => {
         const rawData = await res.json()              
         return(rawData)              
     } catch (error) {
-        throw ("Something failed")
+        throw new Error("Something failed")
     }   
     
 };

@@ -19,7 +19,7 @@ export default function HeaderComponent () {
         document.addEventListener("addCart", function(event) {            
            setCarritoCount(event.detail.count)
         });
-        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [window.location.pathname])
     
 

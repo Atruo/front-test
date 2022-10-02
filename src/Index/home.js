@@ -10,7 +10,7 @@ export default function HomePage () {
 
     useEffect(() => {     
         checkData()     
-        //Comrpobamos cada 10s si ha caducado la información
+        //Comprobamos cada 10s si ha caducado la información
         setInterval(() => {
             checkData()       
         }, 10000);                
@@ -33,7 +33,7 @@ export default function HomePage () {
         }else{
             //Si existe, comprueba que los datos no sean más antiguos de una hora
             let oneHour = 60 * 60 * 1000;
-            if( ((new Date) - new Date(JSON.parse(localStorage.getItem("data"))[1])) < oneHour ) {
+            if( ((new Date()) - new Date(JSON.parse(localStorage.getItem("data"))[1])) < oneHour ) {
                 setData(JSON.parse(localStorage.getItem("data"))[0])                           
             }else{                
                 //Si son mas antiguos realiza la petición al servidor y los actualiza

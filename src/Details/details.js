@@ -17,7 +17,7 @@ export default function DetailsPage () {
         setInterval(() => {
             checkData()       
         }, 10000);                
-       
+       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
     const setDefaultCodes = (telf)=> {        
@@ -42,7 +42,7 @@ export default function DetailsPage () {
         }else{
             //Si existe, comprueba que los datos no sean más antiguos de una hora
             let oneHour = 60 * 60 * 1000;
-            if(((new Date) - new Date(JSON.parse(localStorage.getItem(url))[1])) < oneHour ) {
+            if(((new Date()) - (new Date(JSON.parse(localStorage.getItem(url))[1]))) < oneHour ) {
                 setData(JSON.parse(localStorage.getItem(url))[0]) 
                 setDefaultCodes(JSON.parse(localStorage.getItem(url))[0])               
             }else{                
